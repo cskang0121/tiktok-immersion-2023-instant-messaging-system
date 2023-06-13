@@ -13,7 +13,7 @@ SELECT * FROM messages WHERE chat = 'a1:a2' ORDER BY send_time ASC LIMIT 2, 2;
 SELECT COUNT(id) FROM messages WHERE chat = 'a1:a2';
 
 -- Define the table "messages"
-CREATE TABLE messages (id int PRIMARY KEY AUTO_INCREMENT, chat VARCHAR(255), sender VARCHAR(255), send_time INT, message TEXT);
+CREATE TABLE messages (id INT PRIMARY KEY AUTO_INCREMENT, chat VARCHAR(255), sender VARCHAR(255), send_time INT, message TEXT);
 
 -- Test inserting into the table
 INSERT INTO messages (chat, sender, send_time, message) VALUES ('a1:a2', 'a1', unix_timestamp(now()), 'hello');

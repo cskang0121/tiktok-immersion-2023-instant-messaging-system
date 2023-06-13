@@ -23,7 +23,7 @@
 2. Database schema design is not restricted to any form.
 
 #### Message Delivery
-1. Deliver messages to the intended recipients by Pull mode in a timely and consistent manner. <br>
+1. Deliver messages to the intended recipients by "Pull" mode in a timely and consistent manner. <br>
   a. No need to maintain the connection. <br>
   b. No need to push new messages to receivers in real-time.
 2. Pull API must be implemented for receivers to fetch messages.
@@ -71,7 +71,7 @@ Assignment repository: https://github.com/TikTokTechImmersion/assignment_demo_20
 3. The table ```messages``` has the following definition:
 ```
 CREATE TABLE messages (
-  id int PRIMARY KEY AUTO_INCREMENT, 
+  id INT PRIMARY KEY AUTO_INCREMENT, 
   chat VARCHAR(255), 
   sender VARCHAR(255), 
   send_time INT, 

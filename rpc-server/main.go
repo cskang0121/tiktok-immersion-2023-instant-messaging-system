@@ -29,7 +29,7 @@ func main() {
 	defer drop.Close()
 
 	// Create new table "messages"
-	create, err := db.Query("CREATE TABLE messages (id int PRIMARY KEY AUTO_INCREMENT, chat VARCHAR(255), sender VARCHAR(255), send_time INT, message TEXT);")
+	create, err := db.Query("CREATE TABLE messages (id INT PRIMARY KEY AUTO_INCREMENT, chat VARCHAR(255), sender VARCHAR(255), send_time INT, message TEXT);")
     if err != nil {
         panic(err)
     }
