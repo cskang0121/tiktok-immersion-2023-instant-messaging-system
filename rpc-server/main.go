@@ -14,8 +14,6 @@ import (
 
 func main() {
 
-	/* --------------- Modularization --------------- */ 	
-
 	// Initialise connection to database "tiktok"
 	db, err := sql.Open("mysql", "root:password@tcp(mysql:3306)/tiktok")
     if err != nil {
@@ -24,7 +22,7 @@ func main() {
     defer db.Close()
 
 	// Drop table "messages" if previously created 
-	drop, err := db.Query("DROP TABLE IF EXISTS messages")
+	drop, err := db.Query("DROP TABLE IF EXISTS messages;")
 	if err != nil {
         panic(err)
     }

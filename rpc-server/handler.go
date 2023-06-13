@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"math/rand"
 	"github.com/TikTokTechImmersion/assignment_demo_2023/rpc-server/kitex_gen/rpc"
 
 	"database/sql"
@@ -38,7 +37,7 @@ func (s *IMServiceImpl) Send(ctx context.Context, req *rpc.SendRequest) (*rpc.Se
     }
     defer db.Close()
 
-	// Insert message to MySQL database
+	// Insert message to database
 	queryStatement := fmt.Sprintf("INSERT INTO messages (chat, sender, send_time, message) VALUES ('%v', '%v', %v, '%v');",
 		roomID,
 		req.Message.GetSender(),
@@ -46,10 +45,11 @@ func (s *IMServiceImpl) Send(ctx context.Context, req *rpc.SendRequest) (*rpc.Se
 		req.Message.GetText(),
 	)
 	
+	// Set response
 	resp := rpc.NewSendResponse()
-	// resp.Code, resp.Msg = areYouLucky()	
 
 	insert, err := db.Query(queryStatement)
+
 	if err != nil {
         resp.Code, resp.Msg = 500, "failure in sending message..."
     } else {
@@ -69,11 +69,14 @@ func (s *IMServiceImpl) Pull(ctx context.Context, req *rpc.PullRequest) (*rpc.Pu
 	retr := int64(req.GetLimit())
 
 	// Retrieve messages
-	messages, hasMore, err := GetDataByRoomID(roomID, start, retr, req.GetReverse())
+	messages, hasMore, err := getDataByRoomID(roomID, start, retr, req.GetReverse())
 	if err != nil {
 		return nil, err
 	}
 	nextCursor := start + retr
+
+	// Set response
+	resp := rpc.NewPullResponse()
 
 	respMessages := make([]*rpc.Message, 0)
 
@@ -87,8 +90,6 @@ func (s *IMServiceImpl) Pull(ctx context.Context, req *rpc.PullRequest) (*rpc.Pu
 		respMessages = append(respMessages, curMsg)
 	}
 
-	resp := rpc.NewPullResponse()
-	// resp.Code, resp.Msg = areYouLucky()
 	resp.Messages = respMessages
     resp.Code = 0
     resp.Msg = "success"
@@ -98,15 +99,12 @@ func (s *IMServiceImpl) Pull(ctx context.Context, req *rpc.PullRequest) (*rpc.Pu
 	return resp, nil
 }
 
-func areYouLucky() (int32, string) {
-	if rand.Int31n(2) == 1 {
-		return 0, "success"
-	} else {
-		return 500, "oops"
-	}
-}
+// ######################################### Helper Functions #########################################
 
-// Helper functions : Send
+// validateSendRequest
+// 		1. Check if the "Chat" field is set correctly, e.g., "a1:a2"
+// 		2. Check if the "Sender" exists in "Chat"
+// Return an error: Error if failed the check, else nil
 func validateSendRequest(req *rpc.SendRequest) error {
 
     senders := strings.Split(req.Message.Chat, ":")
@@ -125,6 +123,8 @@ func validateSendRequest(req *rpc.SendRequest) error {
     return nil
 }
 
+// getRoomID
+// Return a string: A correctly formatted "roomID", i.e., "Chat"
 func getRoomID (chat string) string {
 	var roomID string
 
@@ -143,7 +143,12 @@ func getRoomID (chat string) string {
 	return roomID
 }
 
-func GetDataByRoomID(roomID string, start int64, retr int64, reverse bool) ([]Message, bool, error) {
+// getDataByRoomID
+// Return 
+// 		1. []Messages	: Messages a roomID in the correct order
+// 		2. bool 		: False if no more messages to be retrieved, else true
+// 		3. error		: Error if any
+func getDataByRoomID(roomID string, start int64, retr int64, reverse bool) ([]Message, bool, error) {
 	var (
 		messages 		[]Message
 		order 			string

@@ -4,7 +4,6 @@ import (
 	"context"
 	"log"
 	"time"
-	// "fmt"
 
 	"github.com/TikTokTechImmersion/assignment_demo_2023/http-server/kitex_gen/rpc"
 	"github.com/TikTokTechImmersion/assignment_demo_2023/http-server/kitex_gen/rpc/imservice"
@@ -112,11 +111,6 @@ func pullMessage(ctx context.Context, c *app.RequestContext) {
 			SendTime: msg.SendTime,
 		})
 	}
-
-	// NOT RETURNING EMPTY & FALSE //
-	// fmt.Println("Testing.....")
-	// fmt.Println(resp.GetHasMore())
-	// fmt.Println(messages)
 	
 	// Pull Response from idl_http.proto
 	c.JSON(consts.StatusOK, &api.PullResponse{

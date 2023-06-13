@@ -21,10 +21,10 @@ message SendRequest {
 message SendResponse {} // return a reasonable HTTP status code if error occurs
 
 message PullRequest {
-  string chat = 1;  // format "<member1>:<member2>", e.g. "john:doe"
-  int64 cursor = 2; // starting position of message's send_time, inclusively, 0 by default
-  int32 limit = 3;  // the maximum number of messages returned per request, 10 by default
-  bool reverse = 4; // if false, the results will be sorted in ascending order by time
+  string chat = 1;      // format "<member1>:<member2>", e.g. "john:doe"
+  int64 cursor = 2;     // starting position of message's send_time, inclusively, 0 by default
+  int32 limit = 3;      // the maximum number of messages returned per request, 10 by default
+  bool reverse = 4;     // if false, the results will be sorted in ascending order by time
 }
 
 message PullResponse {
@@ -34,7 +34,6 @@ message PullResponse {
 }
 
 service MessageService {
-
   // rpc <methodName> (<argType>) returns (<returnType>);
   rpc Send (SendRequest) returns (SendResponse); // POST
   rpc Pull (PullRequest) returns (PullResponse); // GET
