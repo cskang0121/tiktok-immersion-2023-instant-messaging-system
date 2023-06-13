@@ -7,10 +7,10 @@ services:
     environment:
       - SERVICE_NAME=rpc-server
       - SERVICE_TAGS=rpc
-    restart: on-failure
+    restart: on-failure   # Restart if fails
     depends_on:
       - etcd
-      - mysql # Depends on mysql
+      - mysql             # Depends on mysql
   http-server:
     build: http-server
     ports:
@@ -26,8 +26,7 @@ services:
     command: ["etcd", "--advertise-client-urls", "http://etcd:2379", "--listen-client-urls", "http://0.0.0.0:2379"]
     ports:
       - "2379:2379"
-  # New dependeny > MySQL
-  mysql:
+  mysql:                  # New dependeny > MySQL
     image: mysql:latest
     ports: 
       - "3306:3306"

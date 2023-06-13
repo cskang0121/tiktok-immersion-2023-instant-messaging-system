@@ -36,7 +36,6 @@ message PullResponse {
 service MessageService {
 
   // rpc <methodName> (<argType>) returns (<returnType>);
-  
   rpc Send (SendRequest) returns (SendResponse); // POST
   rpc Pull (PullRequest) returns (PullResponse); // GET
 }
