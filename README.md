@@ -66,8 +66,8 @@ Assignment repository: https://github.com/TikTokTechImmersion/assignment_demo_20
 
 ## Database Design
 
-1. The code automatically create a database, ```tiktok``` upon successful docker compose.
-2. The code automatically create a table, ```messages``` under the ```tiktok``` database, and drops table of the same name, if any.
+1. The code automatically creates a database, ```tiktok``` upon successful docker compose.
+2. The code automatically creates a table, ```messages``` under the ```tiktok``` database, and drops table of the same name, if any.
 3. The table ```messages``` has the following definition:
 ```
 CREATE TABLE messages (
@@ -95,7 +95,7 @@ CREATE TABLE messages (
 1. Open a new terminal, ```cd``` to ```tiktok-tech-immersion-2023-instant-messaging-system``` folder.
 2. Run the command ```docker-compose up``` to start the instant messaging application on your local machine. Ensure all services are running on the corresponding ports:
 
-![Screenshot 2023-06-14 at 12 44 43 AM](https://github.com/cskang0121/tiktok-tech-immersion-2023-instant-messaging-system/assets/79074359/044dfcb0-169b-49da-9bcb-fb3532db0a52)
+<img width="350" alt="Screenshot 2023-06-14 at 12 07 18 PM" src="https://github.com/cskang0121/tiktok-tech-immersion-2023-instant-messaging-system/assets/79074359/919830c4-a7f7-4b76-990d-feb5d1da0cee">
 
 3. Open a new terminal, run ```curl localhost:8080/ping``` to test if the application is running successfully, you should receive the response: ```{"message":"pong"}```.
 
