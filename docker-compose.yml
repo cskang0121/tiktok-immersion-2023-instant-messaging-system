@@ -30,11 +30,6 @@ services:
     image: mysql:latest
     ports:
       - "3306:3306"
-    restart: always
-    healthcheck:
-      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
-      timeout: 20s
-      retries: 10
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=tiktok
