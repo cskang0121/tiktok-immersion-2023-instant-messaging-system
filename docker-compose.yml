@@ -28,8 +28,13 @@ services:
       - "2379:2379"
   mysql:                  # New dependeny > MySQL
     image: mysql:latest
-    ports: 
+    ports:
       - "3306:3306"
+    restart: always
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      timeout: 20s
+      retries: 10
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=tiktok
