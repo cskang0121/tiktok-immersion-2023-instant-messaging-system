@@ -1,4 +1,4 @@
-![TikTok-Logo-652x367](https://github.com/cskang0121/tiktok-immersion-2023-instant-messaging-system/assets/79074359/efba01c7-18d2-4002-a35e-4605e73fa3ae)
+![tiktok-tech-immersion-march-2023-edm](https://github.com/cskang0121/tiktok-tech-immersion-2023-instant-messaging-system/assets/79074359/a8d4232a-3a50-41f1-ae05-72123a9a0ebc)
 # TikTok Tech Immersion Programme 2023 
 
 ## Individual Project Completed By 
