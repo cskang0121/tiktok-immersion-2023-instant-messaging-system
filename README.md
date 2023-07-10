@@ -87,7 +87,7 @@ CREATE TABLE messages (
   a. Install Golang (```go version go1.20.4 darwin/arm64``` is used for this project) <br>
   b. Install Docker (```Docker version 23.0.5, build bc4487a``` is used for this project) <br>
   c. Install JMeter (```Binaries – apache-jmeter-5.5.zip``` is used for this project, note that JMeter requires Java 8+) and place this application in your desktop <br>
-  d. Install MySQL Workbench for visualization of database (optional)
+  d. Install MySQL Workbench for visualization of database (optional) <br>
   e. Install Insomnia for API testing [click here to download](https://insomnia.rest/download) or, Postman (optional) 
 2. Run the command ```git clone https://github.com/cskang0121/tiktok-tech-immersion-2023-instant-messaging-system.git``` in the terminal in the prefered destination on your local machine.
 
