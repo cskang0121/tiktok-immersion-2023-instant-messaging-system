@@ -38,8 +38,6 @@
 
 ## Repository High Level Architecture
 
-Assignment repository: https://github.com/TikTokTechImmersion/assignment_demo_2023/
-
 ```
 | tiktok-tech-immersion-2023-instant-messaging-system      # Root folder
 
@@ -146,6 +144,14 @@ CREATE TABLE messages (
 
 - Based on the result, with 20 concurrent (threads) users, the application achieved 0% error and 88ms max response time.
 
+## Credits
+> Special thanks to **Tiktok Singapore** for organising this meaningful programme!
+
+## References
+* [Programme details](https://bytedance.sg.feishu.cn/docx/CEusdOSGHody93xCekHlbBOvgGR)
+* [Assignment repository](https://github.com/TikTokTechImmersion/assignment_demo_2023/)
+* [Assignment criteria](https://bytedance.sg.feishu.cn/docx/P9kQdDkh5oqG37xVm5slN1Mrgle)
+  
 ## Certificate Of Completion
 
 ![Certificate (Kang Chin Shen)](https://github.com/cskang0121/tiktok-tech-immersion-2023-instant-messaging-system/assets/79074359/a15bed91-374f-4e4a-bf39-bfac9c64cd2a)
