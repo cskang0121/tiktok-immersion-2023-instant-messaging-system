@@ -148,9 +148,9 @@ CREATE TABLE messages (
 > Special thanks to **Tiktok Singapore** for organising this meaningful programme!
 
 ## References
-* [Programme details](https://bytedance.sg.feishu.cn/docx/CEusdOSGHody93xCekHlbBOvgGR)
-* [Assignment repository](https://github.com/TikTokTechImmersion/assignment_demo_2023/)
-* [Assignment criteria](https://bytedance.sg.feishu.cn/docx/P9kQdDkh5oqG37xVm5slN1Mrgle)
+* [Programme Details](https://bytedance.sg.feishu.cn/docx/CEusdOSGHody93xCekHlbBOvgGR)
+* [Assignment Repository](https://github.com/TikTokTechImmersion/assignment_demo_2023/)
+* [Assignment Criteria](https://bytedance.sg.feishu.cn/docx/P9kQdDkh5oqG37xVm5slN1Mrgle)
   
 ## Certificate Of Completion
 
