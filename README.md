@@ -151,7 +151,11 @@ CREATE TABLE messages (
 * [Programme Details](https://bytedance.sg.feishu.cn/docx/CEusdOSGHody93xCekHlbBOvgGR)
 * [Assignment Repository](https://github.com/TikTokTechImmersion/assignment_demo_2023/)
 * [Assignment Criteria](https://bytedance.sg.feishu.cn/docx/P9kQdDkh5oqG37xVm5slN1Mrgle)
-  
+
+## More
+* Invited to "An Evening with TikTok 2023" career and networking event (an exclusive event for participants who successfully completed TikTok Immersion 2023). Attendees of this event will be benefit from an **accelerated hiring process** .
+* For more information, please refer to : https://bytedance.sg.feishu.cn/docx/GYDidToofo7jbqxoTFXlcyHpgEf
+
 ## Certificate Of Completion
 
 ![Certificate (Kang Chin Shen)](https://github.com/cskang0121/tiktok-tech-immersion-2023-instant-messaging-system/assets/79074359/a15bed91-374f-4e4a-bf39-bfac9c64cd2a)
