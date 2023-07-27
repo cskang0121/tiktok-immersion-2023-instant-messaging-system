@@ -153,7 +153,7 @@ CREATE TABLE messages (
 * [Assignment Criteria](https://bytedance.sg.feishu.cn/docx/P9kQdDkh5oqG37xVm5slN1Mrgle)
 
 ## More
-* Invited to "An Evening with TikTok 2023" career and networking event (an exclusive event for participants who successfully completed TikTok Immersion 2023). Attendees of this event will be benefit from an **accelerated hiring process** .
+* Invited to "An Evening with TikTok 2023" career and networking event (an exclusive event for participants who successfully completed TikTok Tech Immersion 2023). Attendees of this event will be benefit from an **accelerated hiring process**.
 * For more information, please refer to : https://bytedance.sg.feishu.cn/docx/GYDidToofo7jbqxoTFXlcyHpgEf
 
 ## Certificate Of Completion
