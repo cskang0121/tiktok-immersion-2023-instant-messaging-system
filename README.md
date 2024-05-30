@@ -159,3 +159,5 @@ CREATE TABLE messages (
 ## Certificate Of Completion
 
 ![Certificate (Kang Chin Shen)](https://github.com/cskang0121/tiktok-tech-immersion-2023-instant-messaging-system/assets/79074359/a15bed91-374f-4e4a-bf39-bfac9c64cd2a)
+
+Please click [here](https://bytedance.sg.feishu.cn/file/XB2DbvfiXo5s1uxDWC9lyWw4gpb) to verify the certificate of completion.
